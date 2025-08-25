@@ -1,0 +1,24 @@
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+   return 'Hello World'
+
+if __name__ == '__main__':
+   app.run()
+
+
+
+from flask import Flask
+app = Flask(__name__) 
+#app variable a flask raklam then special variable name
+jokhn code run korbe tokhno bujbe kon project kothay ase load korbe
+@app.route('/')#root url -> landing page or home. slash likha mane bujay kon page a jabe.
+
+def home(): #jokhn user web address a req pathabe tokhn home functon call  hobe
+   return 'Welcome to flask'
+
+if __name__ == '__main__': #
+   app.run(debug=True)
