@@ -1,0 +1,56 @@
+===================   1
+from flask import Flask, render_template #ei template use korbo htm read korar jonno
+app = Flask(__name__)
+
+@app.route('/')#root url
+def home():
+   return render_template('index.html') #user html file a req korle eita render template render korbe index file
+#directly code na likhe refer korchi  html file ke
+
+if __name__ == '__main__':
+   app.run(debug=True)
+
+
+===================== 2
+#app routing
+
+from flask import Flask, render_template #ei template use korbo htm read korar jonno
+app = Flask(__name__)
+
+@app.route('/')#root url
+def home():
+   return render_template('index.html') #user html file a req korle eita render template render korbe index file
+#directly code na likhe refer korchi  html file ke
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+if __name__ == '__main__':
+   app.run(debug=True)
+
+==========Index
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask app</title>
+</head>
+<body>
+<h1>Welcome to my FLask App</h1>
+</body>
+</html>
+
+
+========== About
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Page</title>
+</head>
+<body>
+<h1>This is about page, Static routing</h1>
+
+</body>
+</html>
+========== 
